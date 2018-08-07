@@ -8,18 +8,20 @@ context(class {
       output: 'dist/$name.js',
       useTypescriptCompiler: true,
       experimentalFeatures: true,
-      plugins: [
-        !this.isProduction && WebIndexPlugin()
-      ]
     })
   }
 })
 
 task('default', async context => {
   const fuse = context.getConfig()
-  fuse.bundle('thisnamedoesnotmatter')
+  fuse.bundle('js/front')
                       .watch('app/**')
+                      .hmr()
                       .instructions('> app/index.tsx')
-  fuse.dev({port: 4445})
+  fuse.bundle('js/back')
+                      .watch('back/**')
+                      .instructions('> [back/index.ts]')
+                      .completed(proc => proc.start())
+  fuse.dev({port: 4444, httpServer: false})
   fuse.run()
 })
