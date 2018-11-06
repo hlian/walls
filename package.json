@@ -11,7 +11,9 @@
     "prettier-watch": "onchange 'fuse.js' 'server/**/*.ts' -- prettier --write {{changed}}"
   },
   "dependencies": {
+    "@types/styled-components": "^4.0.3",
     "date-fns": "1.29.0",
+    "fuse-box": "^3.6.0",
     "koa": "2.5.2",
     "koa-body": "4.0.4",
     "koa-bodyparser": "4.2.1",
@@ -20,9 +22,11 @@
     "koa-static": "5.0.0",
     "mustache": "2.3.0",
     "onchange": "4.0.0",
-    "react": "16.4.1",
-    "react-dom": "16.4.1",
-    "typescript": "2.9.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "styled-components": "^4.0.3",
+    "typescript": "^3.1.6",
     "write-file-atomic": "2.3.0"
   },
   "devDependencies": {
@@ -38,9 +42,8 @@
     "@types/react-dom": "16.0.6",
     "@types/write-file-atomic": "2.1.1",
     "concurrently": "3.5.1",
-    "fuse-box": "3.4.0",
     "jest": "22.4.4",
-    "prettier": "1.12.1",
+    "prettier": "^1.14.3",
     "tslint": "5.11.0"
   },
   "jest": {

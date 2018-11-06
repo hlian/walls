@@ -1,7 +1,6 @@
-import * as React from 'react'
-import * as ReactDOM from 'react-dom'
+import * as React from "react";
+import * as ReactDOM from "react-dom";
 
-import SignUp from './components/sign-up'
+import Threads from "./components/thread";
 
-console.debug(SignUp)
-ReactDOM.render(<SignUp />, document.getElementById('sign-up'))
+ReactDOM.render(<Threads />, document.getElementById("sign-up"));

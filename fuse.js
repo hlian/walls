@@ -22,6 +22,6 @@ task('default', async context => {
                       .watch('back/**')
                       .instructions('> [back/index.ts]')
                       .completed(proc => proc.start())
-  fuse.dev({port: 4444, httpServer: false})
+  fuse.dev({port: 4444})
   fuse.run()
 })
