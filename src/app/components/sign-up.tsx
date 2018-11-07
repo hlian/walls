@@ -16,13 +16,7 @@ class SignUp extends React.Component<{}> {
         <header>SIGN UP</header>
         <form id="sign-up" onSubmit={this.onSubmit}>
           <p>
-            <input
-              name="username"
-              ref={this.username}
-              required
-              pattern="[a-z]+"
-            />{" "}
-            Username (only lowercase letters from a to z)
+            <input name="username" ref={this.username} required pattern="[a-z]+" /> Username (only lowercase letters from a to z)
           </p>
           <p>
             <input type="submit" value="W A L L" />
